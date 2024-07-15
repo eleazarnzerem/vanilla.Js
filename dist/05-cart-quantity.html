@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="output.css">
+  <title>Cart</title>
+</head>
+<body class="">
+    <div class="flex justify-center h-screen items-center">
+        <div class="bg-gray-400 rounded-sm w-[431px] px-2 h-[20rem] py-1 flex flex-col justify-between">
+          <div id="screen" class="bg-white w-4/4 p-4 rounded-sm text-black"> Cart Quantity</div>
+
+          <div class="flex space-x-2">
+            <button class="bg-black py-1 px-2 text-white rounded-md" onclick="screenElement.innerHTML = `Cart quantity: ${cartQuantity}` ">Show Quantity</button>
+            <button class="bg-black py-1 px-2 text-white rounded-md" onclick=" cartQuantity = cartQuantity + 1; screenElement.innerHTML = `Cart quantity: ${cartQuantity}`"> Add to cart</button>
+            <button class="bg-black py-1 px-2 text-white rounded-md" onclick=" cartQuantity = cartQuantity + 2; screenElement.innerHTML = `Cart quantity: ${cartQuantity}`"> + 2</button>
+            <button class="bg-black py-1 px-2 text-white rounded-md" onclick=" cartQuantity = cartQuantity + 3; screenElement.innerHTML = `Cart quantity: ${cartQuantity}`"> + 3</button>
+            <button class="bg-black py-1 px-2 text-white rounded-md" onclick=" cartQuantity = 0; screenElement.innerHTML = `cart was reset Cart quantity: ${cartQuantity}`"> Reset Cart</button>
+          </div>
+        </div>
+    </div>
+   <script>
+      let cartQuantity = 0;
+
+     var screenElement = document.getElementById('screen');
+
+    </script>
+</body>
+</html>
