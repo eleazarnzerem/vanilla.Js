@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>calculator</title>
+    <link rel="stylesheet" href="output.css" />
+  </head>
+  <body>
+    <div class="flex justify-center h-screen items-center">
+      <div class="bg-gray-400 rounded-md px-2 py-1 flex flex-col space-y-3">
+        <div id="screen" class="bg-white w-4/4 h-20 text-black py-3 px-2 rounded-md flex flex-shrink"></div>
+        <div class="buttons grid grid-cols-4 gap-2">
+          <button
+            class="bg-black text-white font-semibold px-3 py-2 rounded-md"
+            onclick="
+            calculation +='1';
+            screenElement.innerHTML = `${calculation}`;
+          "
+          >
+            1
+          </button>
+          <button
+            class="bg-black text-white font-semibold px-3 py-2 rounded-md"
+            onclick="
+            calculation +='2';
+            screenElement.innerHTML = `${calculation}`;""
+          >
+            2
+          </button>
+          <button
+            class="bg-black text-white font-semibold px-3 py-2 rounded-md"
+            onclick="
+            calculation +='3';
+            screenElement.innerHTML = `${calculation}`;"
+          >
+            3
+          </button>
+          <button
+            class="bg-black text-white font-semibold px-3 py-2 rounded-md"
+            onclick="
+            calculation +='4';
+            screenElement.innerHTML = `${calculation}`;"
+          >
+            4
+          </button>
+          <button
+            class="bg-black text-white font-semibold px-3 py-2 rounded-md"
+            onclick="
+            calculation +='5';
+            screenElement.innerHTML = `${calculation}`;"
+          >
+            5
+          </button>
+          <button
+            class="bg-black text-white font-semibold px-3 py-2 rounded-md"
+            onclick="
+            calculation +='6';
+            screenElement.innerHTML = `${calculation}`;"
+          >
+            6
+          </button>
+          <button
+            class="bg-black text-white font-semibold px-3 py-2 rounded-md"
+            onclick="
+            calculation +='7';
+            screenElement.innerHTML = `${calculation}`;"
+          >
+            7
+          </button>
+          <button
+            class="bg-black text-white font-semibold px-3 py-2 rounded-md"
+            onclick="
+            calculation +='8';
+            screenElement.innerHTML = `${calculation}`;"
+          >
+            8
+          </button>
+          <button
+            class="bg-black text-white font-semibold px-3 py-2 rounded-md"
+            onclick="
+            calculation +='9';
+            screenElement.innerHTML = `${calculation}`;"
+          >
+            9
+          </button>
+          </button>
+          <button
+            class="bg-black text-white font-semibold px-3 py-2 rounded-md"
+            onclick="
+            calculation +='0';
+            screenElement.innerHTML = `${calculation}`;"
+          >
+            0
+          </button>
+          <button
+            class="bg-black text-white font-semibold px-3 py-2 rounded-md"
+            onclick="
+            calculation = 0;
+            screenElement.innerHTML = `${calculation}`;"
+          >
+            Clear
+          </button>
+          <button
+            class="bg-black text-white font-semibold px-3 py-2 rounded-md"
+
+            onclick="
+             calculation += ' + ';
+             screenElement.innerHTML = `${calculation}`; 
+            "
+          >
+            +
+          </button>
+          <button
+            class="bg-black text-white font-semibold px-3 py-2 rounded-md"
+
+            onclick="
+             calculation += ' - ';
+             screenElement.innerHTML = `${calculation}`; 
+            "
+          >
+            -
+          </button>
+          <button
+            class="bg-black text-white font-semibold px-3 py-2 rounded-md"
+
+            onclick="
+             calculation += ' / ';
+             screenElement.innerHTML = `${calculation}`; 
+            "
+          >
+            /
+          </button>
+          <button
+            class="bg-black text-white font-semibold px-3 py-2 rounded-md"
+
+            onclick="
+             calculation += ' * ';
+             screenElement.innerHTML = `${calculation}`; 
+            "
+          >
+            X
+          </button>
+          <button
+            class="bg-black text-white font-semibold px-3 py-2 rounded-md"
+
+            onclick="
+             calculation = eval(calculation);
+             screenElement.innerHTML = `${calculation}`; 
+            "
+          >
+            =
+          </button>
+            
+        </div>
+      </div>
+    </div>
+
+    <!---------------------exercise----------------------- -->
+
+    <script>
+      let calculation = "";
+
+      let screenElement = document.getElementById("screen");
+    </script>
+  </body>
+</html>
